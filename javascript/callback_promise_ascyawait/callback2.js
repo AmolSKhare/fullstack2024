@@ -15,12 +15,12 @@ function cube(n){
 //     return square1 + square2;
 // }
 
-function sumofSquares(a,b,callback){  //callback function 
+function sumofSquaresOrCubes(a,b,callback){  //callback function 
     let square1 = callback(a);
     let square2 = callback(b);
     return square1+square2;
 }
-let ans = sumofSquares(2,3,square);
-let ans2 = sumofSquares(2,3,cube);
+let ans = sumofSquaresOrCubes(2,3,square);
+let ans2 = sumofSquaresOrCubes(2,3,cube);
 console.log("sum of squares = ",ans);
-console.log("sum of squares = ",ans2);
+console.log("sum of cubes = ",ans2);
