@@ -1,0 +1,124 @@
+//Basic linux commands 
+
+pwd  :  present working directory
+cd   :  change directory 
+ls   :  list the files and folders in current directory
+mkdir:  create new directory
+mkdir dirname && cd dirname : you can create new directory and navigate to that directory
+ex- $mkdir test && cd test 
+
+mkdir -p newdirectoryname/subdirectories : using this command you can create the new directory and sub directories inside it 
+ex-$ mkdir -p notes/note1
+
+
+touch:  create the file 
+cat  :  read the file on terminal screen
+cat > filename.extension : will be used to write the contents into the file 
+cat >> filename.extension: will be used to append the data to the file
+vi   :  to open vim text editor 
+mv   :  move or rename the file
+ex - $mv demo.script fullstack/scripts 
+ command file    destination
+
+
+cp   :  copy the file 
+ex- $ cp index.html frontend/htmlfiles
+   command source    destination
+
+cp -r : used to copy the directories 
+ex- $cp -r  frontend1 fullstack/project1
+    command source    destination
+
+    
+
+
+nvm  :  node version manager used to manage diff node version in one system 
+npm  :  node package manager used for install,delete and manage the node packages
+node :  to execute the js files in node environment
+
+
+
+
+ls with options :
+ls -l <directory name>: will show directory/files with names and permissions associated with it 
+ex --rw-r--r-- 1 ajamo 197121 651 Aug 10 16:23 gitcommands.txt
+
+ls -R <directory name> : will provide list of the subdirectories as well 
+example : $ ls -R callback_promise_ascyawait/
+op :will print list of subdirectories 
+
+
+ls -lt <dir name> : to find the last modified time and date of directory 
+example :$ ls -lt nodejs/
+total 81
+drwxr-xr-x 1 ajamo 197121     0 Aug 10 15:12 node_modules/
+-rw-r--r-- 1 ajamo 197121  1871 Aug  6 12:46 httpstatuscodes.txt
+
+
+ls -la <dir name> : to find the hidden files + normal file with last modified date and time 
+
+example :$ ls -la nodejs/
+total 90
+-rw-r--r-- 1 ajamo 197121    12 Aug  6 12:04 .gitignore
+-rw-r--r-- 1 ajamo 197121  1871 Aug  6 12:46 httpstatuscodes.txt
+drwxr-xr-x 1 ajamo 197121     0 Aug 10 15:12 node_modules/
+
+ls -lRa <dir name >: if you want to see the hidden files within hidden files or subdirectories with last modified 
+example :$ ls -lRa javascript/
+javascript/:
+total 16
+drwxr-xr-x 1 ajamo 197121   0 Aug  9 04:15 ./
+drwxr-xr-x 1 ajamo 197121   0 Aug 10 16:05 ../
+drwxr-xr-x 1 ajamo 197121   0 Aug  9 04:15 callback_promise_ascyawait/
+-rw-r--r-- 1 ajamo 197121 424 Aug 10 12:54 variables.js
+javascript/callback_promise_ascyawait:
+total 28
+drwxr-xr-x 1 ajamo 197121   0 Aug  9 04:15 ./
+drwxr-xr-x 1 ajamo 197121   0 Aug  9 04:15 ../
+-rw-r--r-- 1 ajamo 197121 474 Aug  5 18:52 async2.js
+-rw-r--r-- 1 ajamo 197121 306 Jul 24 19:41 asyncawait1.js
+
+
+ls -lr <dir name >: reverse order for modified (means first modified will come first , descending order)
+example -$ ls -lr javascript/
+total 8
+-rw-r--r-- 1 ajamo 197121 424 Aug 10 12:54 variables.js
+drwxr-xr-x 1 ajamo 197121   0 Aug  9 04:15 callback_promise_ascyawait/
+
+
+ls -s <dir name >: list the directory by the size 
+example -$ ls -s javascript/
+total 8
+4 callback_promise_ascyawait/  4 variables.js
+
+ls -lR | grep.json : Print all the file with .json extension in current dir 
+example :$ ls -lR | grep .js
+drwxr-xr-x 1 ajamo 197121  0 Aug  6 12:46 nodejs/
+-rw-r--r-- 1 ajamo 197121 424 Aug 10 12:54 variables.js
+-rw-r--r-- 1 ajamo 197121 474 Aug  5 18:52 async2.js
+
+ls *.<file extension>: Print all the file from current directory with specific file extension 
+example :$ ls *.js
+variables.js
+
+
+ls <fraction of dirname>* :if you want to print from directory but you dont know the complete name ,then you can  
+                           add * after the initials , it will show all the file contains of that file 
+example :$ ls java*
+callback_promise_ascyawait/  variables.js
+
+
+ls .. : if you fire this command at root directory then it will print all the file and directories in that root directory
+
+example :$ls ..
+assignment5.pdf.docx        nodejs2024/            testgitKnowledge/
+
+
+
+
+
+
+
+
+
+
