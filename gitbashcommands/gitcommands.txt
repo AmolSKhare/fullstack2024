@@ -29,7 +29,7 @@ cp -r : used to copy the directories
 ex- $cp -r  frontend1 fullstack/project1
     command source    destination
 
-    
+
 
 
 nvm  :  node version manager used to manage diff node version in one system 
@@ -114,6 +114,16 @@ example :$ls ..
 assignment5.pdf.docx        nodejs2024/            testgitKnowledge/
 
 
+permissions :
+drwxr-xr-x   -- d -directory ,r -read , w-write ,x -execute 
+
+
+chmod ugo+   -adding permissions
+chmod ugo-   -removing the permissions 
+
+
+example:
+chmod g+wx abc.txt     ->provided the write and execute permission 
 
 
 
