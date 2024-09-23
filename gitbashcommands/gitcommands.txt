@@ -170,6 +170,83 @@ find out how many times "command" word is used in current file .
 ex:-
 grep command gitbashcommands/gitcommands.txt  | wc
 
+print the count of the given word in the file using grep 
+ex:-
+grep -c "hello" demofile.txt 
+4 
+
+print the lines where the word "hello" is present 
+ex:
+grep -h "hello" demofile.txt 
+output:
+hello world
+saying hello
+no hello this time 
+
+
+print the lines where the word "hello" is present IGNORE THE CASE SENSITIVE PART
+ex:
+grep -hi "hello" demofile.txt 
+output:
+hey HELLO there
+HI HEllo
+hello world
+saying hello
+no hello this time 
+
+
+this command will print the word with line number 
+ex:grep -hinw "hello" demofile.txt 
+1:hey HELLO there
+3:HI HEllo
+4:hello world
+11:saying hello
+54:no hello this time
+
+
+history :
+this command will all the commands you used 
+
+
+bash script :
+
+#!/bin/bash     ---->this should be the first line of script so terminal will understand that this is script file 
+
+
+
+The "sed" command can be used as substitute for the grep command 
+
+syntax :
+sed 's/pattern/replacement '
+ex-
+sed 's/success/p' log.txt
+
+will show success with logs 
+
+ex-
+sed 's/success/ok/' log.txt 
+
+will change/replace  "success" with "ok" .
+
+use "sed" command for backup :
+sed -ibackup 's/success/ok/' log.txt 
+
+will create the backup of original file and make change in new file too.
+
+
+you can control the change/replacement on the number of lines 
+in following example it will be limited for 3 lines
+ ex -sed '3 s/success/ok/' log.txt 
+
+
+awk :
+aws [options] script file 
+
+how patterns are define :'(pattern){action}'
+ex-
+awk '/ERROR/{print $0}' log.txt    
+will print all the lines having error in it in log.txt file 
+
 
 
 
