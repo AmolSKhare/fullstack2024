@@ -114,20 +114,61 @@ example :$ls ..
 assignment5.pdf.docx        nodejs2024/            testgitKnowledge/
 
 
+chmod :
+3 set of people -
+users , group ,others
+
 permissions :
 drwxr-xr-x   -- d -directory ,r -read , w-write ,x -execute 
 
 
-chmod ugo+   -adding permissions
+chmod ugo+   -adding permissions( u-users ,g-group ,o-others)
 chmod ugo-   -removing the permissions 
 
 
 example:
 chmod g+wx abc.txt     ->provided the write and execute permission 
 
+chmod 777 filename :
+will provide all permissions that is read,write and execute.
 
 
+echo "hello world "  - will print hello world to screen
 
+print first 10 rows of the file :
+head filename.extension
+
+print last 10 rows of the file :
+tail file.extension
+
+top 20 first rows of the file :
+head -20 filename.extension
+
+bottom 20 rows of the file :
+tail -20 filename.extension
+
+| pipe operator :
+command1 | command 2             -whatever ouput of command1 is there will flow till the command 2 output 
+
+example -
+tail -n +25 gitbashcommands/gitcommands.txt  | head -5 gitbashcommands/gitcommands.txt 
+
+word count command :
+wc gitbashcommands/gitcommands.txt 
+ 161  794 5115 gitbashcommands/gitcommands.txt
+lines words characters 
+
+
+grep :
+grep will be used findout the characters words etc 
+
+ex - grep helloworld filename.extension
+find the helloworld word inside the filename.extension
+
+grep and wc :
+find out how many times "command" word is used in current file .
+ex:-
+grep command gitbashcommands/gitcommands.txt  | wc
 
 
 
